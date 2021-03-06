@@ -5,13 +5,13 @@ if (filter_has_var(INPUT_POST, 'register')) {
     if ($_REQUEST['name'] == '' || $_REQUEST['email'] == '' || $_REQUEST['password'] == '') {
         echo "You are required to fill all the input fields";
         echo "<br>";
-        echo "<a href='register.php'>Go Back</a>";
+        echo "<a href='index.php'>Go Back</a>";
         return;
     }
     if (array_key_exists($_REQUEST['email'], $_SESSION)) {
         echo "Email already exist";
         echo "<br>";
-        echo "<a href='register.php' >Go Back</a>";
+        echo "<a href='index.php' >Go Back</a>";
         return;
     }
     $_SESSION[$_REQUEST['email']] = $_REQUEST;
@@ -33,6 +33,7 @@ if (filter_has_var(INPUT_POST, 'login')) {
         }
     } else {
         echo "You either entered an invalid email address or password, please try again";
+        echo "<br>";
         echo "<a href='login.php'>Go Back</a>";
     }
 };

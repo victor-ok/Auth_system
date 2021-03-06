@@ -19,7 +19,7 @@
         <input type="password" id="password" name="password" placeholder="Your Password?">
 
         <input type="submit" name="login" value="Login">
-        <p>Don't have an account? <a href="register.php">Register</a></p>
+        <p>Don't have an account? <a href="index.php">Register</a></p>
     </form>
 </div>
 </body>
